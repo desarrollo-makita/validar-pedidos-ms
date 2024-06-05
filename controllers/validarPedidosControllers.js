@@ -17,7 +17,7 @@ async function validarPedidos(req , res){
             return res.status(400).json({ error: `Parámetros faltantes o vacíos` });
         }
 
-        const objPedido =  req.body.data;
+        const objPedido =  req.body;
         console.log("objPedido: " , objPedido);
         logger.info(`Iniciamos la funcion validarPedidos`);
 
