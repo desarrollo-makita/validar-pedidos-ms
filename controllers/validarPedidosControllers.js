@@ -22,7 +22,7 @@ async function validarPedidos(req , res){
         // Conectarse a la base de datos 'DTEBdQMakita'
         await connectToDatabase('Telecontrol');
         
-        const consulta = `SELECT * FROM Pedidos where ID_Pedido = '${objPedido.pedido} and ProcesoCompleto = 0'`;
+        const consulta = `SELECT * FROM Pedidos where ID_Pedido = '${objPedido.pedido}`;
         const result = await sql.query(consulta);
         
         logger.info(`Fin  la funcion validarPedidos ${JSON.stringify(result.recordset)}`);
